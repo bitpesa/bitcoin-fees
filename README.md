@@ -1,8 +1,7 @@
 # Bitcoin::Fees
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bitcoin/fees`. To experiment with that code, run `bin/console` for an interactive prompt.
+A simple API wrapper to access the https://bitcoinfees.earn.com in Ruby.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -22,7 +21,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a reusable client that will make requests to the API:
+
+```ruby
+client = Bitcoin::Fees.configure
+```
+
+Supported endpoints
+
+List: This will show all of the fee spreads along with the mining times for those spreads.
+```ruby
+client.list
+
+=> {"fees"=>[{"minFee"=>0, "maxFee"=>0, "dayCount"=>4, "memCount"=>0, "minDelay"=>37, "maxDelay"=>10000, "minMinutes"=>300, "maxMinutes"=>10000}, {"minFee"=>1, "maxFee"=>2, "dayCount"=>22384, "memCount"=>1760, "minDelay"=>0, "maxDelay"=>3, "minMinutes"=>0, "maxMinutes"=>70}, {"minFee"=>3, "maxFee"=>4, "dayCount"=>50632, "memCount"=>820, "minDelay"=>0, "maxDelay"=>2, "minMinutes"=>0, "maxMinutes"=>45}, {"minFee"=>5, "maxFee"=>6, "dayCount"=>25137, "memCount"=>429, "minDelay...
+```
+
+Recommended: This breaks down the fee suggestings into three categories based on the infomation from the list method. This will provide the minimum suggested fee in order to acheive a transaction being mined within the timeframes returned.
+
+```ruby
+client.recommended
+
+=> {"fastestFee"=>8, "halfHourFee"=>8, "hourFee"=>4}
+```
 
 ## Development
 

@@ -1,7 +1,2 @@
-require "bitcoin/fees/version"
-
-module Bitcoin
-  module Fees
-    # Your code goes here...
-  end
-end
+# frozen_string_literal: true
+Dir["#{File.dirname(__FILE__)}/**/*.rb"].each { |f| require(f) }
