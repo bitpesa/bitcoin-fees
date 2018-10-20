@@ -28,5 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry-byebug', ['>= 0']
 
   spec.add_runtime_dependency "rest-client", "~> 2.0"
-  spec.add_runtime_dependency "json", "~> 1.8"
+  spec.add_runtime_dependency "json", "~> 2"
 end
