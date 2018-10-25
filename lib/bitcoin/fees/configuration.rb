@@ -3,7 +3,7 @@
 module Bitcoin
   module Fees
     class Configuration
-      DEFAULT_HOST = 'https://bitcoinfees.earn.com'
+      DEFAULT_HOST = 'https://bitcoinfees.earn.com'.freeze
       attr_accessor :host
 
       def initialize
