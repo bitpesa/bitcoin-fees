@@ -8,7 +8,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.2)
+    addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     byebug (10.0.2)
     coderay (1.1.2)
@@ -17,7 +17,7 @@ GEM
     diff-lcs (1.3)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
-    hashdiff (0.3.7)
+    hashdiff (0.4.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     json (2.1.0)
@@ -32,7 +32,7 @@ GEM
     pry-byebug (3.6.0)
       byebug (~> 10.0)
       pry (~> 0.10)
-    public_suffix (3.0.0)
+    public_suffix (3.1.0)
     rake (10.5.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
@@ -51,11 +51,11 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    safe_yaml (1.0.4)
+    safe_yaml (1.0.5)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
-    webmock (3.1.0)
+    webmock (3.5.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
